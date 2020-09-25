@@ -1,0 +1,30 @@
+{
+  "name": "san-cli-plugin-tools",
+  "version": "0.0.1",
+  "description": "san cli ui addon tools",
+  "scripts": {
+    "prebuild": "rm -rf dist",
+    "start": "cross-env NODE_ENV=development san serve --config san.config.js",
+    "build": "cross-env NODE_ENV=production san build --config san.config.js",
+    "prepublishOnly": "npm run build"
+  },
+  "keywords": [
+    "San CLI UI",
+    "San CLI PLUGIN"
+  ],
+  "author": "zttonly <zttonly@gmail.com>",
+  "license": "MIT",
+  "devDependencies": {
+    "cross-env": "^7.0.2",
+    "graphql-tag": "^2.11.0",
+    "san-cli-ui": "^0.1.2"
+  },
+  "dependencies": {
+    "qrcodejs2": "0.0.2"
+  },
+  "browserslist": [
+    "> 1%",
+    "last 2 versions",
+    "not dead"
+  ]
+}
