@@ -4,11 +4,12 @@
 */
 
 import GenQrcode from './components/gen-qrcode/gen-qrcode';
-import CompressImage from './components/compress-image/compress-image';
-
+import TinyImage from './components/tiny-image/tiny-image';
+import locales from './locales.json';
 
 /* global ClientAddonApi */
 if (window.ClientAddonApi) {
     ClientAddonApi.defineComponent('san.widgets.components.gen-qrcode', GenQrcode);
-    ClientAddonApi.defineComponent('san.widgets.components.compress-image', CompressImage);
+    ClientAddonApi.defineComponent('san.widgets.components.tiny-image', TinyImage);
+    ClientAddonApi.addLocalization(locales);
 }

@@ -66,11 +66,11 @@ module.exports = api => {
 
     // Compress-image 暂时隐藏
     api.registerWidget({
-        id: 'san.widgets.compress-image',
-        title: 'dashboard.widgets.compress-image.title',
-        description: 'dashboard.widgets.compress-image.description',
+        id: 'san.widgets.tiny-image',
+        title: 'dashboard.widgets.tiny-image.title',
+        description: 'dashboard.widgets.tiny-image.description',
         icon: 'file-image',
-        component: 'san.widgets.components.compress-image',
+        component: 'san.widgets.components.tiny-image',
         minWidth: 2,
         minHeight: 2,
         maxWidth: 2,
@@ -95,7 +95,7 @@ module.exports = api => {
     });
 
 
-    api.onAction('san.widgets.actions.compress-image', async params => {
+    api.onAction('san.widgets.actions.tiny-image', async params => {
         let result = [];
         return result;
     });
