@@ -55,7 +55,6 @@ export default {
     computed: {
         quality() {
             let quality = this.data.get('data.config.quality');
-            console.log(quality);
             return quality > 0 && quality <= 1 ? quality : 0.8;
         }
     },

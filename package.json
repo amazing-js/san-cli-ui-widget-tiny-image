@@ -21,6 +21,7 @@
     "san-cli-ui": "^0.1.2"
   },
   "dependencies": {
+    "@baidu/xbox-cli-ui-widget-config": "0.0.1",
     "qrcodejs2": "0.0.2"
   },
   "browserslist": [

@@ -4,7 +4,7 @@
  */
 
 import QRCode from 'qrcodejs2';
-import {frameTypes, box} from '@baidu/schema'; // todo
+import {frameTypes, box} from '@baidu/xbox-cli-ui-widget-config'; // todo
 import './gen-qrcode.less';
 
 export default {
@@ -12,7 +12,7 @@ export default {
         <div class="gen-qrcode">
             <div class="conditions">
                 <s-select value="{{currentType}}"
-                    placeholder="{{$('dashboard.widgets.gen-qrcode.select-type')}}"
+                    placeholder="{{$('san-cli-plugin-tools.gen-qrcode.select-type')}}"
                     on-change="onFrameChange"
                 >
                     <s-select-option s-for="ft in frameTypes" value="{{ft.value}}">
@@ -22,7 +22,7 @@ export default {
                 <s-select
                     s-if="realBox.length > 0" 
                     value="{=currentBox=}"
-                    placeholder="{{$('dashboard.widgets.gen-qrcode.select-box')}}"
+                    placeholder="{{$('san-cli-plugin-tools.gen-qrcode.select-box')}}"
                 >
                     <s-select-option s-for="b in realBox" value="{{b.value}}">
                         {{b.text}}
@@ -35,18 +35,18 @@ export default {
             </div>
             <s-input-search
                 value="{=inputValue=}"
-                placeholder="{{$t('dashboard.widgets.gen-qrcode.placeholder')}}"
-                enter-button="{{$t('dashboard.widgets.gen-qrcode.ok')}}"
+                placeholder="{{$t('san-cli-plugin-tools.gen-qrcode.placeholder')}}"
+                enter-button="{{$t('san-cli-plugin-tools.gen-qrcode.ok')}}"
                 on-search="gen"
                 size="large"
             ></s-input-search>
-            <s-alert s-if="error" message="{{$t('dashboard.widgets.gen-qrcode.err-msg')}}" type="error"/>
+            <s-alert s-if="error" message="{{$t('san-cli-plugin-tools.gen-qrcode.err-msg')}}" type="error"/>
             <div class="title">
-                {{$t('dashboard.widgets.gen-qrcode.sec-title')}}
+                {{$t('san-cli-plugin-tools.gen-qrcode.sec-title')}}
             </div>
             <div class="qrcode" s-ref="qrcode"></div>
             <div class="title">
-                {{$t('dashboard.widgets.gen-qrcode.schema')}}
+                {{$t('san-cli-plugin-tools.gen-qrcode.schema')}}
             </div>
             <div class="schema">{{schema}}</div>
         </div>
@@ -114,7 +114,7 @@ export default {
             width: 200,
             height: 200,
             colorDark: '#1890ffff',
-            colorLight: '#e6f7ffff',
+            colorLight: '#ffffffff',
             correctLevel: QRCode.CorrectLevel.H
         });
     },
