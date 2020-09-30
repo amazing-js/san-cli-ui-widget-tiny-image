@@ -75,23 +75,23 @@ module.exports = api => {
         minHeight: 2,
         maxWidth: 2,
         maxHeight: 2,
-        maxCount: 1
+        maxCount: 1,
         // 增加压缩选项配置
-        // defaultConfig: () => ({
-        //     quality: ''
-        // }),
-        // async onConfigOpen() {
-        //     return {
-        //         prompts: [
-        //             {
-        //                 name: 'quality',
-        //                 type: 'input',
-        //                 message: 'dashboard.widgets.compress-image.prompts.quality',
-        //                 validate: input => !!input
-        //             }
-        //         ]
-        //     };
-        // }
+        defaultConfig: () => ({
+            quality: 0.8
+        }),
+        async onConfigOpen() {
+            return {
+                prompts: [
+                    {
+                        name: 'quality',
+                        type: 'input',
+                        message: 'san-cli-plugin-tools.tiny-image.prompts.quality',
+                        validate: input => !!input
+                    }
+                ]
+            };
+        }
     });
 
 };

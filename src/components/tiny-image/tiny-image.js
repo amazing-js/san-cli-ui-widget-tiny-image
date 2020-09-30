@@ -53,6 +53,11 @@ export default {
         </div>
     `,
     computed: {
+        quality() {
+            let quality = this.data.get('data.config.quality');
+            console.log(quality);
+            return quality > 0 && quality <= 1 ? quality : 0.8;
+        }
     },
     initData() {
         return {
@@ -62,6 +67,21 @@ export default {
             errorTip: '',
             loading: false
         };
+    },
+    attached() {
+        this.addAction();
+    },
+    addAction() {
+        this.dispatch('Widget:addHeaderAction', {
+            id: 'reload',
+            icon: 'reload',
+            disabled: this.data.get('loading'),
+            onCalled: () => this.clearFlieList()
+        });
+    },
+    clearFlieList() {
+        this.data.set('fileList', []);
+        this.reset();
     },
     reset() {
         const fileInput = this.ref('fileInput');
@@ -94,7 +114,7 @@ export default {
             img.onload = e => {
                 const w = img.width;
                 const h = img.height;
-                const quality = 0.8; // 默认图片质量为0.92
+                const quality = this.data.get('quality'); // 默认图片质量为0.92
                 // 生成canvas
                 const canvas = document.createElement('canvas');
                 const ctx = canvas.getContext('2d');
