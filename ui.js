@@ -19,8 +19,8 @@ module.exports = api => {
 
     api.registerWidget({
         id: 'san.widgets.gen-qrcode',
-        title: 'dashboard.widgets.gen-qrcode.title',
-        description: 'dashboard.widgets.gen-qrcode.description',
+        title: 'san-cli-plugin-tools.gen-qrcode.title',
+        description: 'san-cli-plugin-tools.gen-qrcode.description',
         icon: 'qrcode',
         component: 'san.widgets.components.gen-qrcode',
         minWidth: 2,
@@ -34,29 +34,29 @@ module.exports = api => {
                     {
                         name: 'from',
                         type: 'input',
-                        message: 'dashboard.widgets.gen-qrcode.prompts.from',
-                        placeholder: 'dashboard.widgets.run-task.prompts.needless',
+                        message: 'san-cli-plugin-tools.gen-qrcode.prompts.from',
+                        placeholder: 'san-cli-plugin-tools.gen-qrcode.prompts.needless',
                         validate: input => !!input
                     },
                     {
                         name: 'page',
                         type: 'input',
-                        message: 'dashboard.widgets.gen-qrcode.prompts.page',
-                        placeholder: 'dashboard.widgets.run-task.prompts.needless',
+                        message: 'san-cli-plugin-tools.gen-qrcode.prompts.page',
+                        placeholder: 'san-cli-plugin-tools.gen-qrcode.prompts.needless',
                         validate: input => !!input
                     },
                     {
                         name: 'type',
                         type: 'input',
-                        message: 'dashboard.widgets.gen-qrcode.prompts.type',
-                        placeholder: 'dashboard.widgets.run-task.prompts.needless',
+                        message: 'san-cli-plugin-tools.gen-qrcode.prompts.type',
+                        placeholder: 'san-cli-plugin-tools.gen-qrcode.prompts.needless',
                         validate: input => !!input
                     },
                     {
                         name: 'extra',
                         type: 'input',
-                        message: 'dashboard.widgets.gen-qrcode.prompts.extra',
-                        placeholder: 'dashboard.widgets.run-task.prompts.needless',
+                        message: 'san-cli-plugin-tools.gen-qrcode.prompts.extra',
+                        placeholder: 'san-cli-plugin-tools.gen-qrcode.prompts.needless',
                         validate: input => !!input
                     }
                 ]
@@ -64,11 +64,11 @@ module.exports = api => {
         }
     });
 
-    // Compress-image 暂时隐藏
+    // tiny-image
     api.registerWidget({
         id: 'san.widgets.tiny-image',
-        title: 'dashboard.widgets.tiny-image.title',
-        description: 'dashboard.widgets.tiny-image.description',
+        title: 'san-cli-plugin-tools.tiny-image.title',
+        description: 'san-cli-plugin-tools.tiny-image.description',
         icon: 'file-image',
         component: 'san.widgets.components.tiny-image',
         minWidth: 2,
@@ -94,9 +94,4 @@ module.exports = api => {
         // }
     });
 
-
-    api.onAction('san.widgets.actions.tiny-image', async params => {
-        let result = [];
-        return result;
-    });
 };

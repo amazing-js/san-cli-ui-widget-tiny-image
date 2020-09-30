@@ -2,7 +2,7 @@
     "san-cli-plugin-tools": {
         "tiny-image": {
             "title": "压缩图片",
-            "description": "减小图片大小",
+            "description": "缩减图片大小",
             "prompts": {
                 "quality": "压缩图片质量"
             },
@@ -11,7 +11,8 @@
                 "empty": "请至少选择一个文件"
             },
             "upload": "点击选择图片",
-            "limit": "一次最多20张图片, 每张最大5 MB"
+            "limit": "一次最多20张图片, 每张最大5 MB",
+            "empty": "暂无文件"
         },
         "gen-qrcode": {
             "title": "生成二维码",
