@@ -85,6 +85,8 @@ export default {
                 && Object.keys(value).length > 0
                 && this.data.set('slog', value);
         });
+        // 防止locales更新过慢，主动set
+        this.dispatch('Widget:title', this.$t(this.data.get('data.definition.title')));
     },
     gen() {
         const {inputValue, currentType} = this.data.get();

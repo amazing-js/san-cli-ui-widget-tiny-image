@@ -4,7 +4,7 @@
             "title": "压缩图片",
             "description": "缩减图片大小",
             "prompts": {
-                "quality": "压缩图片质量(数值在0-1之间)"
+                "quality": "压缩图片质量(数值0-1之间)"
             },
             "errors": {
                 "fail": "压缩失败请重试",

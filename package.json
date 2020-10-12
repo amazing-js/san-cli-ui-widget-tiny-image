@@ -1,6 +1,6 @@
 {
   "name": "san-cli-plugin-tools",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "san cli ui addon tools",
   "scripts": {
     "prebuild": "rm -rf dist",
@@ -10,7 +10,8 @@
   },
   "keywords": [
     "San CLI UI",
-    "San CLI PLUGIN"
+    "San CLI PLUGIN",
+    "CLI UI WIDGET"
   ],
   "author": "zttonly <zttonly@gmail.com>",
   "license": "MIT",

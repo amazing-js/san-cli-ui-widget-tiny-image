@@ -9,7 +9,7 @@ import locales from './locales.json';
 
 /* global ClientAddonApi */
 if (window.ClientAddonApi) {
+    ClientAddonApi.addLocales(locales);
     ClientAddonApi.defineComponent('san.widgets.components.gen-qrcode', GenQrcode);
     ClientAddonApi.defineComponent('san.widgets.components.tiny-image', TinyImage);
-    ClientAddonApi.addLocalization(locales);
 }

@@ -69,6 +69,8 @@ export default {
     },
     attached() {
         this.addAction();
+        // 防止locales更新过慢，主动set
+        this.dispatch('Widget:title', this.$t(this.data.get('data.definition.title')));
     },
     addAction() {
         this.dispatch('Widget:addHeaderAction', {

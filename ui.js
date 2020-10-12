@@ -12,7 +12,7 @@ module.exports = api => {
     }
     else {
         api.registerAddon({
-            id: 'san.widgets.client-addon',
+            id: 'san.widgets.tools.client-addon',
             path: 'san-cli-plugin-tools/dist'
         });
     }
