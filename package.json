@@ -1,6 +1,6 @@
 {
   "name": "san-cli-plugin-tools",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "san cli ui addon tools",
   "scripts": {
     "prebuild": "rm -rf dist",
