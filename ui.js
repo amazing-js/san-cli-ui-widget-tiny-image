@@ -1,5 +1,5 @@
 /**
- * @file widgets-tools
+ * @file widgets tiny image
  * @author zttonly
  */
 
@@ -12,63 +12,16 @@ module.exports = api => {
     }
     else {
         api.registerAddon({
-            id: 'san.widgets.tools.client-addon',
-            path: 'san-cli-plugin-tools/dist'
+            id: 'san.widgets.tiny-image.client-addon',
+            path: 'san-cli-ui-widget-tiny-image'
         });
     }
-
-    api.registerWidget({
-        id: 'san.widgets.gen-qrcode',
-        title: 'san-cli-plugin-tools.gen-qrcode.title',
-        description: 'san-cli-plugin-tools.gen-qrcode.description',
-        icon: 'qrcode',
-        component: 'san.widgets.components.gen-qrcode',
-        minWidth: 2,
-        minHeight: 3,
-        maxWidth: 2,
-        maxHeight: 3,
-        maxCount: 1,
-        async onConfigOpen() {
-            return {
-                prompts: [
-                    {
-                        name: 'from',
-                        type: 'input',
-                        message: 'san-cli-plugin-tools.gen-qrcode.prompts.from',
-                        placeholder: 'san-cli-plugin-tools.gen-qrcode.prompts.needless',
-                        validate: input => !!input
-                    },
-                    {
-                        name: 'page',
-                        type: 'input',
-                        message: 'san-cli-plugin-tools.gen-qrcode.prompts.page',
-                        placeholder: 'san-cli-plugin-tools.gen-qrcode.prompts.needless',
-                        validate: input => !!input
-                    },
-                    {
-                        name: 'type',
-                        type: 'input',
-                        message: 'san-cli-plugin-tools.gen-qrcode.prompts.type',
-                        placeholder: 'san-cli-plugin-tools.gen-qrcode.prompts.needless',
-                        validate: input => !!input
-                    },
-                    {
-                        name: 'extra',
-                        type: 'input',
-                        message: 'san-cli-plugin-tools.gen-qrcode.prompts.extra',
-                        placeholder: 'san-cli-plugin-tools.gen-qrcode.prompts.needless',
-                        validate: input => !!input
-                    }
-                ]
-            };
-        }
-    });
 
     // tiny-image
     api.registerWidget({
         id: 'san.widgets.tiny-image',
-        title: 'san-cli-plugin-tools.tiny-image.title',
-        description: 'san-cli-plugin-tools.tiny-image.description',
+        title: 'san-cli-ui-widget-tiny-image.title',
+        description: 'san-cli-ui-widget-tiny-image.description',
         icon: 'file-image',
         component: 'san.widgets.components.tiny-image',
         minWidth: 2,
@@ -86,7 +39,7 @@ module.exports = api => {
                     {
                         name: 'quality',
                         type: 'input',
-                        message: 'san-cli-plugin-tools.tiny-image.prompts.quality',
+                        message: 'san-cli-ui-widget-tiny-image.prompts.quality',
                         validate: input => !!input
                     }
                 ]

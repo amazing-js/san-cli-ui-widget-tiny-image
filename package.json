@@ -1,7 +1,7 @@
 {
-  "name": "san-cli-plugin-tools",
-  "version": "0.0.3",
-  "description": "san cli ui addon tools",
+  "name": "san-cli-ui-widget-tiny-image",
+  "version": "0.0.1",
+  "description": "san cli ui widgets tiny image",
   "scripts": {
     "prebuild": "rm -rf dist",
     "start": "cross-env NODE_ENV=development san serve --config san.config.js",
@@ -10,7 +10,7 @@
   },
   "keywords": [
     "San CLI UI",
-    "San CLI PLUGIN",
+    "San CLI WIDGETS",
     "CLI UI WIDGET"
   ],
   "author": "zttonly <zttonly@gmail.com>",
@@ -21,10 +21,7 @@
     "san-cli": "^0.1.5",
     "san-cli-ui": "^0.1.2"
   },
-  "dependencies": {
-    "@baidu/xbox-cli-ui-widget-config": "0.0.1",
-    "qrcodejs2": "0.0.2"
-  },
+  "dependencies": {},
   "browserslist": [
     "> 1%",
     "last 2 versions",
