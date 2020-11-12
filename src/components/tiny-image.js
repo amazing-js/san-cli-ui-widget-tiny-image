@@ -27,15 +27,15 @@ export default {
                 />
                 <s-icon type="{{loading ? 'loading' : 'download'}}" style="font-size: 32px"/>
                 <div class="upload-text">
-                    <p>{{$t('san-cli-plugin-tools.tiny-image.upload')}}</p>
-                    <p class="small">{{$t('san-cli-plugin-tools.tiny-image.limit')}}</p>
+                    <p>{{$t('san-cli-ui-widget-tiny-image.upload')}}</p>
+                    <p class="small">{{$t('san-cli-ui-widget-tiny-image.limit')}}</p>
                 </div>
             </div>
             <div class="result">
                 <s-alert s-if="error" message="{{errorTip}}" type="error"/>
                 <div s-elif="fileList.length <= 0" class="empty">
                     <s-icon type="file" style="font-size: 32px"/>
-                    <p>{{$t('san-cli-plugin-tools.tiny-image.empty')}}</p>
+                    <p>{{$t('san-cli-ui-widget-tiny-image.empty')}}</p>
                 </div>
                 <div s-else class="item" s-for="item in fileList">
                     <div class="main">
