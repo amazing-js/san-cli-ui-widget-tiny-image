@@ -13,7 +13,7 @@ module.exports = api => {
     else {
         api.registerAddon({
             id: 'san.widgets.tiny-image.client-addon',
-            path: 'san-cli-ui-widget-tiny-image'
+            path: 'san-cli-ui-widget-tiny-image/dist'
         });
     }
 

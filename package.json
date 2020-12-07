@@ -1,6 +1,6 @@
 {
   "name": "san-cli-ui-widget-tiny-image",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "san cli ui widgets tiny image",
   "scripts": {
     "prebuild": "rm -rf dist",
@@ -17,7 +17,6 @@
   "license": "MIT",
   "devDependencies": {
     "cross-env": "^7.0.2",
-    "graphql-tag": "^2.11.0",
     "san-cli": "^0.1.5",
     "san-cli-ui": "^0.1.2"
   },
